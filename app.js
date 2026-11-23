@@ -1479,6 +1479,22 @@ function showToast(msg) {
 // MOBILE MENU TOGGLE & SMOOTH USER NAVIGATION
 // --------------------------------------------------------------------------
 
+function scrollToEstimator(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+    mobileMenu.classList.add("hidden");
+  }
+  const targetElement = document.getElementById("estimator");
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+window.scrollToEstimator = scrollToEstimator;
+
 document.addEventListener("DOMContentLoaded", () => {
   initPortfolio();
 
@@ -1490,7 +1506,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        window.__userInteracted = true;
         targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });

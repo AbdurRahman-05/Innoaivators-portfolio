@@ -514,6 +514,11 @@ body {
   box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
 }
 
+/* Ensure all anchored sections scroll neatly beneath the fixed header */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 /* --------------------------------------------------------------------------
    Custom Scrollbar
    -------------------------------------------------------------------------- */

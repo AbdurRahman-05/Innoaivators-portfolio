@@ -24,24 +24,6 @@
         return origFocus.call(this, safeOpts);
       };
     })();
-
-    // Viewport scroll guard: prevent background iframe load events from scrolling parent
-    window.__userInteracted = false;
-    const allowUserScroll = () => { window.__userInteracted = true; };
-    ['wheel', 'touchstart', 'touchmove', 'keydown', 'pointerdown', 'mousedown'].forEach(evt => {
-      window.addEventListener(evt, allowUserScroll, { passive: true, once: true });
-    });
-
-    const guardScroll = () => {
-      if (!window.__userInteracted && window.scrollY > 0) {
-        window.scrollTo(0, 0);
-      }
-    };
-    window.addEventListener('scroll', guardScroll, { passive: true });
-    setTimeout(() => {
-      window.__userInteracted = true;
-      window.removeEventListener('scroll', guardScroll);
-    }, 4000);
   </script>
 
   <!-- Open Graph -->
@@ -122,7 +104,7 @@
 
       <!-- Action Buttons -->
       <div class="hidden sm:flex items-center gap-3">
-        <a href="#estimator" class="btn-primary px-5 py-2.5 text-sm font-semibold rounded-xl flex items-center gap-2 shadow-lg shadow-red-500/20">
+        <a href="#estimator" onclick="scrollToEstimator(event)" class="btn-primary px-5 py-2.5 text-sm font-semibold rounded-xl flex items-center gap-2 shadow-lg shadow-red-500/20">
           <span>Get Quote</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
@@ -144,9 +126,9 @@
         <a href="#products" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Products (ERP/CRM)</a>
         <a href="#marketing" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Reels & Media (10)</a>
         <a href="#services" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Services & Tech</a>
-        <a href="#estimator" class="text-base font-medium text-red-400 mobile-nav-item">Project Cost Estimator</a>
+        <a href="#estimator" onclick="scrollToEstimator(event)" class="text-base font-medium text-red-400 mobile-nav-item">Project Cost Estimator</a>
         <div class="pt-4 flex flex-col gap-2 border-t border-slate-800">
-          <a href="#estimator" class="btn-primary w-full text-center py-2.5 text-sm font-semibold rounded-xl flex items-center justify-center gap-2">
+          <a href="#estimator" onclick="scrollToEstimator(event)" class="btn-primary w-full text-center py-2.5 text-sm font-semibold rounded-xl flex items-center justify-center gap-2">
             <span>Get Quote</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
@@ -449,7 +431,7 @@
     </section>
 
     <!-- SECTION 6: INTERACTIVE PROJECT ESTIMATOR & QUOTE GENERATOR -->
-    <section id="estimator" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+    <section id="estimator" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60 scroll-mt-24">
       <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-red-500/30 shadow-2xl backdrop-blur-xl">
         
         <div class="text-center max-w-2xl mx-auto mb-10">
