@@ -434,7 +434,7 @@ const allItems = [
 
 function renderWebsiteCard(item) {
   const techPills = item.techStack.slice(0, 3).map(t => `<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300 border border-slate-700/60">${t}</span>`).join('');
-  
+
   return `
     <div class="project-card group" data-category="websites" data-id="${item.id}">
       <!-- Live Scaled Laptop Display Header -->
@@ -719,7 +719,7 @@ function initPortfolio() {
   const portfolioGrid = document.getElementById("portfolioGrid");
   if (portfolioGrid) {
     let combinedHTML = "";
-    
+
     // Render top websites
     websitesData.forEach(site => {
       combinedHTML += renderWebsiteCard(site);
@@ -879,8 +879,8 @@ function renderReelsSection(clientFilter = "all") {
   const reelsContainer = document.getElementById("reelsContainer");
   if (!reelsContainer) return;
 
-  const filtered = clientFilter === "all" 
-    ? reelsData 
+  const filtered = clientFilter === "all"
+    ? reelsData
     : reelsData.filter(r => r.clientClass === clientFilter);
 
   reelsContainer.innerHTML = filtered.map(r => renderReelCard(r)).join('');
@@ -998,7 +998,7 @@ function searchCards(query) {
 function resetFilters() {
   const searchInput = document.getElementById("portfolioSearch");
   if (searchInput) searchInput.value = "";
-  
+
   const buttons = document.querySelectorAll(".filter-btn");
   buttons.forEach(b => b.classList.remove("active-filter"));
   const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
@@ -1450,7 +1450,7 @@ function submitEstimate() {
   }
   message += `%0APlease let me know your availability for a discovery call or detailed quotation.`;
 
-  const waUrl = `https://wa.me/919944747069?text=${message}`;
+  const waUrl = `https://wa.me/919087786231?text=${message}`;
 
   showToast("Opening WhatsApp with your customized inquiry...");
   setTimeout(() => {
@@ -1484,7 +1484,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Smooth scroll specifically for user-initiated anchor navigation clicks
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
       if (!targetId || targetId === "#" || targetId === "#!") return;
       const targetElement = document.querySelector(targetId);
