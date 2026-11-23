@@ -578,7 +578,7 @@ function renderAppCard(item) {
         </div>
 
         <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
-          <a href="https://wa.me/919944747069?text=Hi%20Innoaivators%2C%20I%20am%20interested%20in%20building%20a%20mobile%20app%20like%20${encodeURIComponent(item.title)}." target="_blank" class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2">
+          <a href="https://wa.me/919087786231?text=Hi%20Innoaivators%2C%20I%20am%20interested%20in%20building%20a%20mobile%20app%20like%20${encodeURIComponent(item.title)}." target="_blank" class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2">
             <i class="fa-brands fa-whatsapp text-sm"></i>
             <span>Request App Demo</span>
           </a>
@@ -625,7 +625,7 @@ function renderProductCard(item) {
       </div>
 
       <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
-        <a href="https://wa.me/919944747069?text=Hi%20Innoaivators%2C%20I%20would%20like%20a%20custom%20demonstration%20of%20${encodeURIComponent(item.title)}." target="_blank" class="btn-primary flex-1 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+        <a href="https://wa.me/919087786231?text=Hi%20Innoaivators%2C%20I%20would%20like%20a%20custom%20demonstration%20of%20${encodeURIComponent(item.title)}." target="_blank" class="btn-primary flex-1 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
           <i class="fa-solid fa-play text-xs"></i>
           <span>Schedule Live Demo</span>
         </a>
@@ -1035,7 +1035,7 @@ function openModal(id) {
     `;
   }
 
-  const inquiryUrl = `https://wa.me/919944747069?text=Hi%20Innoaivators%20Technologies%2C%20I%20am%20interested%20in%20a%20solution%20similar%20to%20${encodeURIComponent(item.title)}.`;
+  const inquiryUrl = `https://wa.me/919087786231?text=Hi%20Innoaivators%20Technologies%2C%20I%20am%20interested%20in%20a%20solution%20similar%20to%20${encodeURIComponent(item.title)}.`;
 
   content.innerHTML = `
     <div class="flex items-center gap-2 text-xs font-mono text-red-400 mb-2">
