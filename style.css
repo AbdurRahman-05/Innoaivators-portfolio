@@ -1,0 +1,613 @@
+/* ==========================================================================
+   INNOAIVATORS TECHNOLOGIES - CLIENT PORTFOLIO STYLESHEET
+   Modern Cyber-Glassmorphic Dark Theme with Print Optimization
+   ========================================================================== */
+
+:root {
+  --bg-dark: #080507;
+  --bg-surface: #120a0e;
+  --bg-surface-elevated: #1a0f15;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(225, 35, 39, 0.35);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --primary-red: #e12327;
+  --primary-crimson: #ff2a42;
+  --primary-ruby: #991b1b;
+  --accent-rose: #f43f5e;
+  --accent-coral: #fb7185;
+  --accent-amber: #f59e0b;
+  --accent-emerald: #10b981;
+  --accent-purple: #a855f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Background Ambient Lighting & Grid Overlays
+   -------------------------------------------------------------------------- */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.22;
+  pointer-events: none;
+  animation: floatOrb 20s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #e12327, #ff2a42);
+  top: -100px;
+  left: 10%;
+  opacity: 0.18;
+}
+
+.orb-2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #991b1b, #be123c);
+  top: 35%;
+  right: -100px;
+  animation-duration: 25s;
+  opacity: 0.18;
+}
+
+.orb-3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #f43f5e, #fb7185);
+  bottom: 10%;
+  left: 5%;
+  animation-duration: 22s;
+  opacity: 0.16;
+}
+
+@keyframes floatOrb {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(40px) scale(1.08); }
+  100% { transform: translateY(-30px) scale(0.95); }
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 30%, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 30%, #000 60%, transparent 100%);
+}
+
+/* --------------------------------------------------------------------------
+   Gradient & Text Effects
+   -------------------------------------------------------------------------- */
+.gradient-text {
+  background: linear-gradient(135deg, #ff3b53 0%, #e12327 50%, #ff758c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gradient-border {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gradient-border:hover {
+  border-color: rgba(225, 35, 39, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(225, 35, 39, 0.25);
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Interactive Elements
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  background: linear-gradient(135deg, #e12327 0%, #ff2a42 100%);
+  color: #ffffff;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 28px rgba(225, 35, 39, 0.6);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f1f5f9;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(225, 35, 39, 0.5);
+  color: #ffffff;
+}
+
+/* Filter Buttons */
+.filter-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.filter-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.filter-btn.active-filter {
+  background: linear-gradient(135deg, rgba(225, 35, 39, 0.2) 0%, rgba(255, 42, 66, 0.15) 100%);
+  border-color: var(--primary-red);
+  color: #ff4d64;
+  box-shadow: 0 0 20px rgba(225, 35, 39, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Cards: Project, App, Product, Reel
+   -------------------------------------------------------------------------- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(14, 19, 31, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(225, 35, 39, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 30px -5px rgba(225, 35, 39, 0.25);
+}
+
+.project-card-header {
+  position: relative;
+  height: 236px;
+  background: #07090e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.laptop-screen-viewport {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 28px);
+  min-height: 205px;
+  overflow: hidden;
+  background: #07090e;
+}
+
+.laptop-screen-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 800px;
+  border: none;
+  transform-origin: 0 0;
+  transform: scale(var(--laptop-scale, 0.28));
+  pointer-events: none;
+  display: block;
+  background: #090d16;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.mockup-window {
+  width: 100%;
+  height: 100%;
+  background: #090d16;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-card:hover .mockup-window {
+  transform: none;
+}
+
+.mockup-bar {
+  height: 28px;
+  background: #111827;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 6px;
+}
+
+.mockup-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.mockup-url {
+  margin-left: auto;
+  font-size: 9px;
+  font-family: monospace;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 140px;
+}
+
+.mockup-body {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(225, 35, 39, 0.1) 0%, transparent 70%);
+}
+
+.project-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Reel Card Specifics */
+.reel-card {
+  background: rgba(14, 19, 31, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.reel-card:hover {
+  border-color: rgba(236, 72, 153, 0.4);
+  box-shadow: 0 15px 35px -10px rgba(236, 72, 153, 0.2);
+  transform: translateY(-5px);
+}
+
+.reel-embed-container {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #000;
+  overflow: hidden;
+}
+
+.reel-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+.mic-sound-btn {
+  user-select: none;
+  -webkit-user-select: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.reel-embed-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.reel-thumb-container {
+  position: relative;
+  aspect-ratio: 9/14;
+  background: linear-gradient(145deg, #180d28 0%, #0d1222 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.reel-play-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ec4899 0%, #f43f5e 50%, #f59e0b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.5);
+  transition: transform 0.25s ease;
+}
+
+.reel-card:hover .reel-play-circle {
+  transform: scale(1.15);
+}
+
+/* App Phone Mockup Frame */
+.phone-frame {
+  background: #090d16;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2rem;
+  padding: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.phone-screen {
+  background: #0e1320;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   In-Site Live Browser Simulator & Video Reel Theater
+   -------------------------------------------------------------------------- */
+.browser-simulator-window {
+  background: #090608;
+  border: 1px solid rgba(225, 35, 39, 0.35);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95), 0 0 40px rgba(225, 35, 39, 0.2);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.browser-toolbar {
+  height: 52px;
+  background: #140a0f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: 0.75rem;
+}
+
+.browser-address-bar {
+  background: #0a0508;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  font-family: monospace;
+  font-size: 11px;
+  color: #94a3b8;
+  flex: 1;
+  max-width: 480px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.browser-viewport-container {
+  background: #050304;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Device simulation modes */
+.viewport-desktop {
+  width: 100%;
+  height: calc(86vh - 56px);
+  border: none;
+}
+
+.viewport-tablet {
+  width: 768px;
+  max-width: 100%;
+  height: calc(86vh - 56px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.viewport-mobile {
+  width: 390px;
+  max-width: 100%;
+  height: 740px;
+  max-height: calc(86vh - 56px);
+  margin: 1.5rem auto;
+  border: 4px solid #200f15;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9), 0 0 25px rgba(225, 35, 39, 0.25);
+}
+
+.device-toggle-btn {
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.4rem;
+  font-size: 11px;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+}
+
+.device-toggle-btn:hover,
+.device-toggle-btn.active-device {
+  color: #ff4d64;
+  background: rgba(225, 35, 39, 0.2);
+  border-color: rgba(225, 35, 39, 0.5);
+}
+
+/* Reel Theater Modal */
+.reel-theater-frame {
+  width: 380px;
+  max-width: 92vw;
+  height: 680px;
+  max-height: 84vh;
+  border-radius: 32px;
+  border: 4px solid #243046;
+  background: #000000;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(236, 72, 153, 0.3);
+  position: relative;
+}
+
+.reel-inline-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #000;
+}
+
+/* Service Card Hover Glow */
+.service-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(14, 19, 31, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   Custom Scrollbar
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080507;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #251218;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e12327;
+}
+
+/* --------------------------------------------------------------------------
+   PRINT STYLESHEET - CLIENT PDF EXPORT OPTIMIZED
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+  }
+
+  .glow-orb,
+  .grid-overlay,
+  #mainHeader,
+  #estimator,
+  #portfolioSearch,
+  #filterTabs,
+  #mobileMenuBtn,
+  .btn-primary,
+  .btn-secondary,
+  a[href^="https://wa.me"],
+  footer,
+  #toast,
+  button {
+    display: none !important;
+  }
+
+  .print-header {
+    display: block !important;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+  }
+
+  .project-card,
+  .service-card,
+  .reel-card {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 16px !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #0284c7 !important;
+    color: #0284c7 !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: #0f172a !important;
+    page-break-after: avoid !important;
+  }
+
+  p, span, div {
+    color: #334155 !important;
+  }
+
+  a {
+    text-decoration: underline !important;
+    color: #0369a1 !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #64748b;
+  }
+
+  .stat-card {
+    border: 1px solid #cbd5e1 !important;
+    background: #f8fafc !important;
+  }
+}

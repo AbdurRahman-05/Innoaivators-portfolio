@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innoaivators Technologies | Official Client Portfolio & Capabilities Deck</title>
+  <meta name="description" content="Discover Innoaivators Technologies portfolio: Web Engineering, Mobile Apps, Enterprise ERP, AI CRM, Custom Software, and Viral Digital Marketing Campaigns.">
+  <meta name="keywords" content="Innoaivators Technologies, Web Development, Mobile Apps, Custom ERP, AI CRM, Digital Marketing, Reels, Connectzy, Software Company">
+  
+  <!-- Anti Auto-Scroll Protection & Scroll Restoration Override -->
+  <script>
+    // Stop browser from automatically restoring previous scroll offset on reload
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
+    // Neutralize programmatic focus scroll requests from embedded iframes
+    (function() {
+      const origFocus = HTMLElement.prototype.focus;
+      HTMLElement.prototype.focus = function(options) {
+        const safeOpts = typeof options === 'object' && options !== null ? Object.assign({}, options) : {};
+        safeOpts.preventScroll = true;
+        return origFocus.call(this, safeOpts);
+      };
+    })();
+
+    // Viewport scroll guard: prevent background iframe load events from scrolling parent
+    window.__userInteracted = false;
+    const allowUserScroll = () => { window.__userInteracted = true; };
+    ['wheel', 'touchstart', 'touchmove', 'keydown', 'pointerdown', 'mousedown'].forEach(evt => {
+      window.addEventListener(evt, allowUserScroll, { passive: true, once: true });
+    });
+
+    const guardScroll = () => {
+      if (!window.__userInteracted && window.scrollY > 0) {
+        window.scrollTo(0, 0);
+      }
+    };
+    window.addEventListener('scroll', guardScroll, { passive: true });
+    setTimeout(() => {
+      window.__userInteracted = true;
+      window.removeEventListener('scroll', guardScroll);
+    }, 4000);
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Innoaivators Technologies | Digital Engineering & Growth Portfolio">
+  <meta property="og:description" content="Explore our client websites, mobile apps, enterprise SaaS products, and viral digital marketing reels.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="image-removebg-preview.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS Engine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-dark': '#080507',
+            'surface': '#120a0e',
+            'surface-elevated': '#1a0f15',
+            'brand-red': '#e12327',
+            'brand-crimson': '#ff2a42',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-navy-dark text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-slate-950/85 border-b border-red-950/40 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3.5 group">
+        <div class="relative flex items-center justify-center p-1.5 sm:p-2 rounded-xl bg-white border border-white/40 shadow-md shadow-white/10 group-hover:shadow-white/20 transition-all">
+          <img src="image-removebg-preview.png" alt="Innoaivators Technologies Logo" class="h-8 sm:h-10 w-auto object-contain">
+        </div>
+        <div>
+          <span class="font-display font-bold text-lg text-white tracking-wide block leading-tight">Inno<span class="text-red-500">AI</span>vators</span>
+          <span class="text-[11px] text-slate-400 font-mono tracking-wider uppercase block">Technologies</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-slate-800/80 backdrop-blur-md">
+        <a href="#portfolio" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-slate-800/60 active-nav">Portfolio</a>
+        <a href="#websites" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-slate-800/60">Websites</a>
+        <a href="#apps" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-slate-800/60">Apps</a>
+        <a href="#products" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-slate-800/60">Products</a>
+        <a href="#marketing" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-slate-800/60">Reels & Media</a>
+        <a href="#services" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-slate-800/60">Services</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#estimator" class="btn-primary px-5 py-2.5 text-sm font-semibold rounded-xl flex items-center gap-2 shadow-lg shadow-red-500/20">
+          <span>Get Quote</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 px-6 py-6 backdrop-blur-2xl">
+      <div class="flex flex-col gap-4">
+        <a href="#portfolio" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">All Portfolio</a>
+        <a href="#websites" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Websites (11)</a>
+        <a href="#apps" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Mobile Apps (2)</a>
+        <a href="#products" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Products (ERP/CRM)</a>
+        <a href="#marketing" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Reels & Media (10)</a>
+        <a href="#services" class="text-base font-medium text-slate-300 hover:text-red-400 mobile-nav-item">Services & Tech</a>
+        <a href="#estimator" class="text-base font-medium text-red-400 mobile-nav-item">Project Cost Estimator</a>
+        <div class="pt-4 flex flex-col gap-2 border-t border-slate-800">
+          <a href="#estimator" class="btn-primary w-full text-center py-2.5 text-sm font-semibold rounded-xl flex items-center justify-center gap-2">
+            <span>Get Quote</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-28">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 flex flex-col items-center text-center">
+
+      <!-- Main Headline -->
+      <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white max-w-5xl leading-[1.1] mb-6">
+        We Engineer <span class="gradient-text">World-Class Software</span>, Scalable Platforms & High-Growth Media.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-slate-300 text-base sm:text-xl max-w-3xl leading-relaxed mb-10 font-normal">
+        From custom high-performance web applications and native mobile apps to AI-driven ERPs, billing architectures, and viral digital marketing campaigns — <span class="text-white font-semibold">Innoaivators Technologies</span> powers businesses to dominate their industries.
+      </p>
+
+      <!-- CTA Action Group -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+        <a href="#portfolio" class="btn-primary px-7 py-3.5 rounded-xl font-bold text-base flex items-center gap-3 shadow-xl shadow-red-500/25 hover:scale-[1.02] transition-transform">
+          <i class="fa-solid fa-play"></i>
+          <span>Explore Our Work</span>
+        </a>
+        <a href="#marketing" class="px-6 py-3.5 rounded-xl font-bold text-base bg-pink-600/20 border border-pink-500/40 text-pink-300 hover:bg-pink-600/30 hover:border-pink-400 transition-all flex items-center gap-2.5">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span>Live Reels Showcase</span>
+        </a>
+        <a href="https://wa.me/919944747069?text=Hi%20Innoaivators%20Technologies%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl font-semibold text-base bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-600/30 hover:border-emerald-400 transition-all flex items-center gap-2.5">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Direct WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Stats Metric Grid -->
+      <div class="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80 backdrop-blur-xl shadow-2xl">
+        <div class="stat-card p-4 text-center border-r border-slate-800/60 last:border-none">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-red-500 mb-1">11+</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400">Live Client Websites</div>
+        </div>
+        <div class="stat-card p-4 text-center border-r border-slate-800/60 last:border-none">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-rose-400 mb-1">2+</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400">Active Mobile Apps</div>
+        </div>
+        <div class="stat-card p-4 text-center border-r border-slate-800/60 last:border-none">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-emerald-400 mb-1">4</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400">Proprietary ERP/AI SaaS</div>
+        </div>
+        <div class="stat-card p-4 text-center">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-purple-400 mb-1">10+</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400">High-Impact Viral Reels</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PORTFOLIO FILTER & SEARCH SECTION -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 border-b border-slate-800/80 pb-6">
+        <div>
+          <div class="text-xs font-mono tracking-widest text-red-400 uppercase mb-2">Proof of Excellence</div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Featured Portfolio Showcase</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">Filter across our enterprise websites, mobile applications, proprietary systems, and marketing campaigns.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="w-full md:w-80 relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
+          <input type="text" id="portfolioSearch" placeholder="Search projects (e.g. travel, ERP, bags)..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all">
+          <button id="clearSearch" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-xs">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-10" id="filterTabs">
+        <button data-filter="all" class="filter-btn active-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">
+          All Deliverables <span class="ml-1.5 px-2 py-0.5 rounded-md bg-slate-800 text-[11px]">22</span>
+        </button>
+        <button data-filter="websites" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all">
+          <i class="fa-solid fa-globe mr-1.5 text-red-400"></i>Websites <span class="ml-1.5 px-2 py-0.5 rounded-md bg-slate-800 text-[11px]">11</span>
+        </button>
+        <button data-filter="apps" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all">
+          <i class="fa-solid fa-mobile-screen mr-1.5 text-indigo-400"></i>Mobile Apps <span class="ml-1.5 px-2 py-0.5 rounded-md bg-slate-800 text-[11px]">2</span>
+        </button>
+        <button data-filter="products" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all">
+          <i class="fa-solid fa-cubes mr-1.5 text-emerald-400"></i>Enterprise Products <span class="ml-1.5 px-2 py-0.5 rounded-md bg-slate-800 text-[11px]">4</span>
+        </button>
+        <button data-filter="marketing" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all">
+          <i class="fa-brands fa-instagram mr-1.5 text-pink-400"></i>Reels & Marketing <span class="ml-1.5 px-2 py-0.5 rounded-md bg-slate-800 text-[11px]">4 Clients</span>
+        </button>
+      </div>
+
+      <!-- MAIN PORTFOLIO GRID -->
+      <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Rendered by JS or static fallback below -->
+      </div>
+
+      <!-- No Results State -->
+      <div id="noResults" class="hidden text-center py-20 bg-slate-950/40 rounded-3xl border border-slate-800/80">
+        <i class="fa-solid fa-folder-open text-4xl text-slate-600 mb-4"></i>
+        <h4 class="text-xl font-bold text-white mb-1">No matching projects found</h4>
+        <p class="text-slate-400 text-sm max-w-md mx-auto mb-6">Try searching for keywords like "travel", "e-commerce", "finance", "CRM", or reset your filters.</p>
+        <button onclick="resetFilters()" class="px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-red-400 text-sm font-semibold hover:border-red-500 transition-all">Reset Filters</button>
+      </div>
+
+    </section>
+
+    <!-- SECTION 1: WEBSITES DEEP DIVE -->
+    <section id="websites" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-code"></i> Web Architecture
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Full-Stack Client Websites</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">High-conversion, mobile-responsive, lightning-fast web applications designed and developed for regional and international industry leaders.</p>
+        </div>
+        <div class="mt-4 md:mt-0 text-slate-400 text-sm font-mono">
+          Showing <span class="text-red-400 font-bold">11 Production Sites</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="websitesContainer">
+        <!-- Injected via script/HTML -->
+      </div>
+    </section>
+
+    <!-- SECTION 2: MOBILE APPS DEEP DIVE -->
+    <section id="apps" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-mobile-screen"></i> iOS & Android Ecosystems
+        </span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Native & Hybrid Mobile Apps</h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">Engineered for smooth 60fps performance, intuitive gestures, real-time sync, and scalable cloud backends.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="appsContainer">
+        <!-- App 1: Connectzy -->
+        <!-- App 2: Sri Mayan Matrimony App -->
+      </div>
+    </section>
+
+    <!-- SECTION 3: IN-HOUSE ENTERPRISE PRODUCTS (ERP/CRM/BILLING) -->
+    <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-cubes"></i> Innoaivators SaaS Suite
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Our Enterprise Products</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">Custom software engines built from the ground up to automate operations, accelerate billing, and scale customer relationships.</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="https://wa.me/919944747069?text=Hi%20Innoaivators%2C%20I%20would%20like%20to%20request%20a%20live%20demo%20of%20your%20Enterprise%20ERP%20and%20AI%20CRM." target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2">
+            <i class="fa-solid fa-desktop"></i>
+            <span>Request Enterprise Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="productsContainer">
+        <!-- 4 Products -->
+      </div>
+    </section>
+
+    <!-- SECTION 4: DIGITAL MARKETING & INSTAGRAM REELS -->
+    <section id="marketing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-mono uppercase tracking-wider mb-3">
+            <i class="fa-brands fa-instagram"></i> Performance Media & Creative Production
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Viral Reels & Digital Campaigns</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">High-retention storytelling, strategic hooks, crisp color grading, and viral trend architecture driving authentic conversions.</p>
+        </div>
+        <div class="mt-4 md:mt-0 flex items-center gap-2">
+          <span class="text-xs text-slate-400">Filter Client:</span>
+          <select id="reelClientSelect" class="bg-slate-900 border border-slate-700 text-slate-200 text-xs rounded-lg px-3 py-2 focus:outline-none focus:border-red-500">
+            <option value="all">All Campaigns (10 Viral Reels)</option>
+            <option value="client-1">Client 1 (3 Reels)</option>
+            <option value="client-3">Client 3 (2 Reels)</option>
+            <option value="client-4">Client 4 (3 Reels)</option>
+            <option value="client-5">Client 5 (2 Reels)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Reels Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="reelsContainer">
+        <!-- Populated dynamically with high-impact video mockups -->
+      </div>
+    </section>
+
+    <!-- SECTION 5: SERVICES & METHODOLOGY -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-sliders"></i> Full Suite Capabilities
+        </span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">What We Build For Our Clients</h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">From ideation to deployment and long-term customer acquisition, we handle the entire digital lifecycle.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="service-card p-8 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-red-500/40 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-xl mb-6">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Custom Web Engineering</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">Responsive corporate sites, customer portals, booking engines, and e-commerce stores optimized for speed, SEO, and maximum conversion.</p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Next.js, React, Node.js & PHP</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Sub-second loading speeds (Core Web Vitals)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Automated Booking & Payment Gateways</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card p-8 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-indigo-500/40 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl mb-6">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Native & Hybrid Mobile Apps</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">Cross-platform iOS and Android mobile solutions with sleek micro-interactions, offline caching, and real-time push notifications.</p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> Flutter & React Native Architecture</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> Real-time Chat & Geolocation Services</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> App Store & Play Store Publishing</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card p-8 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-emerald-500/40 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-6">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Enterprise ERP & Custom Software</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">Bespoke software systems customized for your exact operations: multi-branch inventory, warehouse sync, supply chain, and HRMS.</p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Zero recurring per-user license traps</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Tailored workflow automation</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Role-based multi-tier security</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card p-8 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-purple-500/40 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl mb-6">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">AI CRM & Workflow Automation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">Automate customer conversations, lead scoring, WhatsApp drip campaigns, and customer support with tailored AI agents.</p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> WhatsApp Business API integration</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Automated follow-up pipelines</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> AI intelligent query routing</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card p-8 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-pink-500/40 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-xl mb-6">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Reels & Performance Marketing</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">End-to-end video scriptwriting, shoot direction, editing, audio mastering, and viral hooks engineered for Instagram and YouTube.</p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400"></i> High-retention short-form video</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400"></i> Meta & Google Ad management</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400"></i> Content calendar & engagement tactics</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card p-8 rounded-2xl bg-slate-950/60 border border-slate-800/80 hover:border-amber-500/40 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
+            <i class="fa-solid fa-receipt"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Custom POS & Cloud Billing</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">High-velocity point-of-sale systems, GST invoice generators, thermal barcode scanners, and audit-ready accounting dashboards.</p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Multi-branch real-time sync</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Offline billing failover</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> WhatsApp invoice PDF delivery</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: INTERACTIVE PROJECT ESTIMATOR & QUOTE GENERATOR -->
+    <section id="estimator" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-red-500/30 shadow-2xl backdrop-blur-xl">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-bolt"></i> Interactive Scope Calculator
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Plan Your Next Project</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">Select your requirements to estimate project scope and send an instant inquiry directly to our engineering team.</p>
+        </div>
+
+        <form id="estimatorForm" class="space-y-8" onsubmit="event.preventDefault(); submitEstimate();">
+          
+          <!-- Step 1: Solution Type -->
+          <div>
+            <label class="block text-sm font-semibold text-slate-300 mb-3">1. Select Primary Solution Type:</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="solutionType" value="Custom Website" class="peer sr-only" checked onchange="calculateEstimate()">
+                <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 peer-checked:border-red-500 peer-checked:bg-red-500/10 text-center transition-all">
+                  <i class="fa-solid fa-globe text-red-400 text-xl mb-2 block"></i>
+                  <span class="text-xs font-semibold block text-slate-200">Custom Website</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="solutionType" value="Mobile Application" class="peer sr-only" onchange="calculateEstimate()">
+                <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 peer-checked:border-indigo-400 peer-checked:bg-indigo-500/10 text-center transition-all">
+                  <i class="fa-solid fa-mobile-screen text-indigo-400 text-xl mb-2 block"></i>
+                  <span class="text-xs font-semibold block text-slate-200">Mobile App</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="solutionType" value="Enterprise ERP / CRM" class="peer sr-only" onchange="calculateEstimate()">
+                <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 peer-checked:border-emerald-400 peer-checked:bg-emerald-500/10 text-center transition-all">
+                  <i class="fa-solid fa-cubes text-emerald-400 text-xl mb-2 block"></i>
+                  <span class="text-xs font-semibold block text-slate-200">Custom ERP/CRM</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="solutionType" value="Digital Marketing & Reels" class="peer sr-only" onchange="calculateEstimate()">
+                <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 peer-checked:border-pink-400 peer-checked:bg-pink-500/10 text-center transition-all">
+                  <i class="fa-brands fa-instagram text-pink-400 text-xl mb-2 block"></i>
+                  <span class="text-xs font-semibold block text-slate-200">Reels & Growth</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Add-on Capabilities -->
+          <div>
+            <label class="block text-sm font-semibold text-slate-300 mb-3">2. Select Desired Features & Modules (Multi-select):</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
+                <input type="checkbox" name="addons" value="AI Chatbot / Automation" class="w-4 h-4 rounded text-red-600 focus:ring-0 bg-slate-900 border-slate-700" onchange="calculateEstimate()">
+                <span class="text-xs font-medium text-slate-300">AI Assistant / Automation</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
+                <input type="checkbox" name="addons" value="Payment Gateway & Invoicing" class="w-4 h-4 rounded text-red-600 focus:ring-0 bg-slate-900 border-slate-700" onchange="calculateEstimate()">
+                <span class="text-xs font-medium text-slate-300">Payment Gateway / Invoicing</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
+                <input type="checkbox" name="addons" value="WhatsApp Automation Integration" class="w-4 h-4 rounded text-red-600 focus:ring-0 bg-slate-900 border-slate-700" onchange="calculateEstimate()">
+                <span class="text-xs font-medium text-slate-300">WhatsApp Automation Engine</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
+                <input type="checkbox" name="addons" value="SEO & Performance Optimization" class="w-4 h-4 rounded text-red-600 focus:ring-0 bg-slate-900 border-slate-700" onchange="calculateEstimate()">
+                <span class="text-xs font-medium text-slate-300">SEO & Core Web Vitals 95+</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
+                <input type="checkbox" name="addons" value="Admin Dashboard & Analytics" class="w-4 h-4 rounded text-red-600 focus:ring-0 bg-slate-900 border-slate-700" onchange="calculateEstimate()">
+                <span class="text-xs font-medium text-slate-300">Admin Dashboard & Analytics</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
+                <input type="checkbox" name="addons" value="High-Retention Video Reels Production" class="w-4 h-4 rounded text-red-600 focus:ring-0 bg-slate-900 border-slate-700" onchange="calculateEstimate()">
+                <span class="text-xs font-medium text-slate-300">Reels Creative Production</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3: Estimated Summary Box -->
+          <div class="p-6 rounded-2xl bg-slate-950 border border-red-500/20 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Scope Overview</div>
+              <div class="text-lg font-bold text-white mt-1" id="scopeSummaryText">Custom Website with standard modern stack</div>
+              <div class="text-xs text-red-400 mt-1 flex items-center gap-2">
+                <i class="fa-solid fa-clock"></i>
+                <span id="scopeTimeline">Estimated Timeline: 2 - 3 Weeks</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp Action Button -->
+            <button type="submit" class="btn-primary w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-bold flex items-center justify-center gap-3 shadow-lg shadow-red-500/20 whitespace-nowrap">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Send Inquiry on WhatsApp</span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: WHY INNOAIVATORS TECHNOLOGIES -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-shield-halved"></i> Engineering Quality Guarantee
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-6">Why Industry Leaders Partner With Innoaivators</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 shrink-0">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Full-Stack Tech Ownership</h4>
+                <p class="text-slate-400 text-sm mt-1">We don't use fragile drag-and-drop builders. Every line of code is structured for scale, speed, SEO, and long-term maintainability.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Engineering + Viral Marketing Synergy</h4>
+                <p class="text-slate-400 text-sm mt-1">Unlike standard dev shops, we unite technical engineering with viral Instagram Reels and performance digital marketing so you get visitors AND revenue.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Dedicated Support & SLA</h4>
+                <p class="text-slate-400 text-sm mt-1">Direct communication with your engineering lead. Zero ticket backlogs, transparent milestones, and reliable 24/7 server uptime support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credentials Card -->
+        <div class="p-8 rounded-3xl bg-slate-950/80 border border-slate-800 shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-red-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="flex items-center justify-between border-b border-slate-800 pb-6 mb-6">
+            <div>
+              <span class="text-xs font-mono text-red-400 uppercase tracking-widest">Headquarters</span>
+              <h3 class="text-xl font-bold text-white mt-1">Innoaivators Technologies</h3>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">Active & Accepting Clients</span>
+          </div>
+
+          <div class="space-y-4 text-sm text-slate-300">
+            <div class="flex items-center justify-between py-2 border-b border-slate-900">
+              <span class="text-slate-400">Official Website</span>
+              <a href="https://innoaivators.com" target="_blank" rel="noopener" class="text-red-400 hover:underline font-mono">innoaivators.com</a>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-slate-900">
+              <span class="text-slate-400">Core Verticals</span>
+              <span class="text-slate-200">Web, Mobile, ERP/CRM & Reels</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-slate-900">
+              <span class="text-slate-400">Deployment SLA</span>
+              <span class="text-emerald-400 font-mono">99.98% Cloud Uptime</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-slate-900">
+              <span class="text-slate-400">Primary Delivery Regions</span>
+              <span class="text-slate-200">India, GCC & Global</span>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <span class="text-slate-400">Client Presentation Format</span>
+              <span class="text-slate-200 font-mono">Interactive Web + PDF Deck</span>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row gap-3">
+            <a href="https://innoaivators.com" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-500 text-sm font-semibold text-white transition-all">
+              Visit Corporate Portal
+            </a>
+            <a href="deck.html" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-red-500/20 border border-red-500/40 text-red-300 hover:bg-red-500/30 text-sm font-semibold transition-all">
+              Launch Presentation Deck
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER / CTA -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 pb-12 border-b border-slate-900">
+          
+          <div class="flex items-center gap-3.5">
+            <div class="relative flex items-center justify-center p-1.5 sm:p-2 rounded-xl bg-white border border-white/40 shadow-md shadow-white/10">
+              <img src="image-removebg-preview.png" alt="Innoaivators Technologies Logo" class="h-9 sm:h-11 w-auto object-contain">
+            </div>
+            <div>
+              <span class="font-display font-bold text-xl text-white">Innoaivators Technologies</span>
+              <p class="text-xs text-slate-400 mt-0.5">Empowering Businesses with Cutting-Edge Software & Digital Growth</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://wa.me/919944747069?text=Hi%20Innoaivators%20Technologies%2C%20let%27s%20discuss%20our%20project." target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>WhatsApp Chat</span>
+            </a>
+            <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-500 text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center gap-2">
+              <i class="fa-solid fa-download"></i>
+              <span>Export PDF</span>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+          <p>© 2026 Innoaivators Technologies. All rights reserved.</p>
+          <div class="flex items-center gap-4">
+            <a href="#hero" class="hover:text-red-400 transition-colors">Back to Top</a>
+            <span>•</span>
+            <a href="https://innoaivators.com" target="_blank" class="hover:text-red-400 transition-colors">Official Website</a>
+            <span>•</span>
+            <a href="deck.html" target="_blank" class="hover:text-red-400 transition-colors">Client Deck View</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- QUICK VIEW DETAIL MODAL -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+    <div class="relative w-full max-w-2xl rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="modalContent">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- IN-SITE LIVE WEBSITE SIMULATOR MODAL -->
+  <div id="siteViewerModal" class="fixed inset-0 z-50 hidden flex flex-col items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/90 backdrop-blur-xl">
+    <div class="browser-simulator-window w-full max-w-7xl h-full flex flex-col">
+      <!-- Browser Chrome Toolbar -->
+      <div class="browser-toolbar">
+        <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1.5 mr-2">
+            <button onclick="closeSiteViewer()" class="w-3.5 h-3.5 rounded-full bg-rose-500 hover:opacity-80 flex items-center justify-center text-[8px] text-rose-950 font-bold transition-opacity" title="Close Viewer">✕</button>
+            <button onclick="reloadSiteViewer()" class="w-3.5 h-3.5 rounded-full bg-amber-500 hover:opacity-80 flex items-center justify-center text-[8px] text-amber-950 font-bold transition-opacity" title="Reload Frame">↻</button>
+            <button onclick="toggleFullscreenSimulator()" class="w-3.5 h-3.5 rounded-full bg-emerald-500 hover:opacity-80 flex items-center justify-center text-[8px] text-emerald-950 font-bold transition-opacity" title="Expand">⛶</button>
+          </div>
+          <span id="siteViewerTitle" class="text-xs font-semibold text-white hidden sm:inline-block max-w-[150px] truncate">Innoaivators Simulator</span>
+        </div>
+
+        <!-- Address Bar -->
+        <div class="browser-address-bar">
+          <i class="fa-solid fa-lock text-emerald-400 mr-2 text-[10px]"></i>
+          <span id="siteViewerAddressText" class="truncate">https://innoaivators.com/</span>
+        </div>
+
+        <!-- Device & Quick Switch Controls -->
+        <div class="flex items-center gap-2">
+          <!-- Quick Website Switcher Dropdown -->
+          <select id="siteViewerSelect" onchange="switchSiteFromDropdown(this.value)" class="bg-slate-900 border border-slate-700 text-slate-200 text-xs rounded-lg px-2.5 py-1 focus:outline-none focus:border-red-500 max-w-[140px] sm:max-w-[180px] hidden md:block">
+            <!-- Populated via JS -->
+          </select>
+
+          <!-- Responsive Viewport Buttons -->
+          <div class="hidden sm:flex items-center gap-1 bg-slate-950 p-0.5 rounded-lg border border-slate-800">
+            <button onclick="setViewerDevice('desktop')" id="devBtn-desktop" class="device-toggle-btn active-device" title="Desktop 100%">
+              <i class="fa-solid fa-desktop"></i>
+            </button>
+            <button onclick="setViewerDevice('tablet')" id="devBtn-tablet" class="device-toggle-btn" title="Tablet 768px">
+              <i class="fa-solid fa-tablet-screen-button"></i>
+            </button>
+            <button onclick="setViewerDevice('mobile')" id="devBtn-mobile" class="device-toggle-btn" title="Mobile 390px">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </button>
+          </div>
+
+          <a id="siteViewerExternalLink" href="#" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white text-xs flex items-center gap-1.5 transition-all" title="Open in External Tab">
+            <span class="hidden lg:inline text-[11px]">New Tab</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+
+          <button onclick="closeSiteViewer()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs transition-all">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Browser Viewport Container -->
+      <div class="browser-viewport-container flex-1">
+        <!-- Loading Spinner -->
+        <div id="siteViewerLoader" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-950/90 backdrop-blur-sm transition-opacity duration-300">
+          <div class="w-12 h-12 rounded-full border-2 border-red-500/20 border-t-red-500 animate-spin mb-4"></div>
+          <div class="text-sm font-semibold text-white mb-1">Loading Interactive Live Site...</div>
+          <div class="text-xs text-slate-400 font-mono" id="siteViewerLoaderText">Connecting to secure host</div>
+        </div>
+
+        <!-- The Live Iframe -->
+        <iframe id="siteViewerIframe" class="viewport-desktop transition-all duration-300" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen onload="handleIframeLoaded()"></iframe>
+      </div>
+
+      <!-- Bottom Status Bar -->
+      <div class="h-8 bg-slate-950 border-t border-slate-900 px-4 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Innoaivators Live Simulator Engine</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span id="simulatorStatusText">Rendering Live Website</span>
+          <span class="text-slate-700">|</span>
+          <button onclick="reloadSiteViewer()" class="text-red-400 hover:underline">Force Reload</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IN-SITE REEL CINEMA / PLAYER MODAL -->
+  <div id="reelTheaterModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-2xl">
+    <div class="relative w-full max-w-4xl flex flex-col md:flex-row items-center justify-center gap-6 p-4">
+      
+      <!-- Close Button -->
+      <button onclick="closeReelTheater()" class="absolute -top-12 md:top-0 right-2 md:-right-12 w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white flex items-center justify-center transition-all z-20">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <!-- Simulated Smartphone Phone Frame -->
+      <div class="reel-theater-frame shrink-0">
+        <!-- Top Bezel Notch -->
+        <div class="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-900 rounded-full z-20 flex items-center justify-center pointer-events-none">
+          <div class="w-2.5 h-2.5 rounded-full bg-slate-950 mr-2"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-slate-800"></div>
+        </div>
+
+        <!-- Reel Loading Spinner -->
+        <div id="reelLoader" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-950 text-center p-6">
+          <div class="w-10 h-10 rounded-full border-2 border-pink-500/20 border-t-pink-500 animate-spin mb-3"></div>
+          <div class="text-xs font-semibold text-white">Loading Video Reel...</div>
+          <div class="text-[10px] text-pink-400 mt-1 font-mono">Instagram Stream Active</div>
+        </div>
+
+        <!-- Video Reel Iframe -->
+        <iframe id="reelTheaterIframe" class="w-full h-full border-none" src="about:blank" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen onload="handleReelLoaded()"></iframe>
+      </div>
+
+      <!-- Campaign Details & Navigation Sidebar -->
+      <div class="flex-1 max-w-md w-full bg-slate-900/90 border border-slate-800 rounded-3xl p-6 backdrop-blur-xl shadow-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span id="theaterClientBadge" class="px-2.5 py-1 rounded-full text-[10px] font-mono bg-pink-500/10 border border-pink-500/30 text-pink-300">
+              Client 1 Campaign
+            </span>
+            <span id="theaterReelCounter" class="text-xs font-mono text-slate-400">
+              Reel 1 of 10
+            </span>
+          </div>
+
+          <h3 id="theaterReelTitle" class="font-display font-bold text-xl text-white mb-1">
+            Dynamic Viral Brand Hook
+          </h3>
+          <div id="theaterReelMetrics" class="text-xs font-bold text-pink-400 font-mono mb-4">
+            🔥 125K+ Organic Views
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80 mb-6">
+            <div class="text-[10px] font-mono uppercase text-slate-400 tracking-wider mb-1">Campaign Strategy:</div>
+            <p id="theaterReelDesc" class="text-xs text-slate-300 leading-relaxed">
+              Fast-paced visual hook, engaging kinetic typography, and trending sound alignment driving viral brand reach.
+            </p>
+          </div>
+        </div>
+
+        <!-- Player Navigation Controls -->
+        <div>
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <button onclick="prevTheaterReel()" class="btn-secondary flex-1 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+              <i class="fa-solid fa-chevron-left"></i>
+              <span>Prev Reel</span>
+            </button>
+            <button onclick="nextTheaterReel()" class="btn-primary flex-1 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+              <span>Next Reel</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 pt-4 border-t border-slate-800/80">
+            <a id="theaterDirectLink" href="#" target="_blank" rel="noopener" class="flex-1 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-instagram text-pink-400"></i>
+              <span>Open on Instagram</span>
+            </a>
+            <a href="https://wa.me/919944747069?text=Hi%20Innoaivators%2C%20I%20want%20to%20produce%20viral%20reels%20for%20my%20business." target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-1.5" title="Inquire Reel Production">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>Order</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP CHAT BUTTON -->
+  <a href="https://wa.me/919944747069?text=Hi%20Innoaivators%20Technologies%2C%20I%20am%20reviewing%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-lg shadow-emerald-500/40 hover:scale-110 transition-all group" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <span class="absolute right-16 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs font-semibold text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
+      Chat with Us Live
+    </span>
+  </a>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-24 right-6 z-50 hidden px-4 py-3 rounded-xl bg-slate-900 border border-red-500/40 text-red-300 text-xs font-semibold shadow-2xl backdrop-blur-md flex items-center gap-2">
+    <i class="fa-solid fa-circle-check text-red-400"></i>
+    <span id="toastMsg">Inquiry link generated!</span>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+
+</body>
+</html>
