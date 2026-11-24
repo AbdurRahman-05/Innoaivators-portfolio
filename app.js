@@ -391,16 +391,16 @@ const reelsData = [
     description: "Time-limited promotional video with bold text overlays driving click-throughs to website and WhatsApp."
   },
 
-  // Client 5 (2 Reels)
+  // Client 5 (4 Reels)
   {
     id: "reel-5-1",
     client: "Client 5",
     clientClass: "client-5",
-    code: "DfpHXVRDLJO",
-    url: "https://www.instagram.com/reel/DfpHXVRDLJO/?utm_source=ig_web_copy_link&dmpr=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==",
+    code: "DYTn4c5PEs7",
+    url: "https://www.instagram.com/reel/DYTn4c5PEs7/?gwpx=ZDF4Y3A1bXFxY3l0",
     type: "Sensory & Visual Craft",
     category: "marketing",
-    metrics: "180K+ Views",
+    metrics: "185K+ Views",
     accent: "emerald",
     title: "Cinematic Atmosphere Reel 1",
     description: "Crisp lighting, macro lens perspectives, and ASMR-grade audio design that elevates product desirability."
@@ -409,14 +409,40 @@ const reelsData = [
     id: "reel-5-2",
     client: "Client 5",
     clientClass: "client-5",
-    code: "DfrsHBSERjs",
-    url: "https://www.instagram.com/reel/DfrsHBSERjs/?utm_source=ig_web_copy_link&dmpr=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==",
+    code: "DX4N10rv7Va",
+    url: "https://www.instagram.com/reel/DX4N10rv7Va/?hvrq=MTVqNW9pejhsYjBlZw==",
     type: "Viral Hook Reel",
     category: "marketing",
-    metrics: "145K+ Views",
+    metrics: "155K+ Views",
     accent: "emerald",
-    title: "Story Hook & Climax Reel 2",
-    description: "High retention storytelling that keeps watch time above 100%, signaling Instagram's algorithm for exponential reach."
+    title: "Dynamic Product Showcase Reel 2",
+    description: "High-retention storytelling and seamless visual motion designed to maximize watch time and feed saves."
+  },
+  {
+    id: "reel-5-3",
+    client: "Client 5",
+    clientClass: "client-5",
+    code: "DXB0cWdj7cN",
+    url: "https://www.instagram.com/reel/DXB0cWdj7cN/?hvrq=MWRwanA5enk5dnp2ag==",
+    type: "Lifestyle Narrative",
+    category: "marketing",
+    metrics: "135K+ Views",
+    accent: "emerald",
+    title: "Brand Atmosphere & Mood Reel 3",
+    description: "Evocative lifestyle narrative paired with rhythmic sound design establishing premium brand resonance."
+  },
+  {
+    id: "reel-5-4",
+    client: "Client 5",
+    clientClass: "client-5",
+    code: "DfMvnuyP4y0",
+    url: "https://www.instagram.com/reel/DfMvnuyP4y0/?fqnt=eTZtdjk2dGZkNXRm",
+    type: "High-Conversion CTA",
+    category: "marketing",
+    metrics: "165K+ Views",
+    accent: "emerald",
+    title: "Story Hook & Conversion Reel 4",
+    description: "Compelling visual hook leading into an impactful climax designed for organic shares and inbound client inquiries."
   }
 ];
 

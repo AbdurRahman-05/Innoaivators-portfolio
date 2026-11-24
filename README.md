@@ -41,11 +41,11 @@ A modern, high-converting, cyber-glassmorphic digital portfolio and capabilities
 - **Innoaivators Custom Billing System** – High-speed point-of-sale, ESC/POS thermal printing, barcode scanning, and 1-click WhatsApp bill PDFs.
 - **Innoaivators Custom Software Engineering** – Bespoke enterprise architectures, API gateways, and custom workflow modernization.
 
-### 4. Digital Marketing & Viral Instagram Reels (10 Reels across 4 Clients)
+### 4. Digital Marketing & Viral Instagram Reels (12 Reels across 4 Clients)
 - **Client 1**: 3 Reels (Viral Brand Hook, Product Spotlight, Offer & Conversion)
 - **Client 3**: 2 Reels (Customer Walkthrough, Kinetic Speed Ramp)
 - **Client 4**: 3 Reels (Problem Solver, Before & After Transformation, Flash Deal CTA)
-- **Client 5**: 2 Reels (Cinematic Atmosphere, Story Hook & Climax)
+- **Client 5**: 4 Reels (Cinematic Atmosphere, Dynamic Product Showcase, Brand Atmosphere & Mood, Story Hook & Conversion)
 
 ---
 
